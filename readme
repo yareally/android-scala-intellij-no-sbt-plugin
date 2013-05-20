@@ -7,7 +7,7 @@ https://github.com/jberkel/android-plugin (props to the maintainers/creators, bu
 Just do the following instead:
 
 
-Testing Scala features on Android (and also building without a hacky plugin).
+Testing Scala features on Android (and also building without any additional plugins).
 
 Using proguard lets you build Scala without any hacky plugins. Shockingly,
 I never actually saw anyone attempt to try this, but glad I did.
