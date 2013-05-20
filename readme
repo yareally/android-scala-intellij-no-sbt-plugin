@@ -1,0 +1,41 @@
+Want to use Scala on Android with Intellij without having to resort to additional plugins?
+
+Before you had to use something like this with sbt and build externally:
+
+https://github.com/jberkel/android-plugin (props to the maintainers/creators, but there's an easier way!)
+
+That's now a thing of the past! Just do the following instead:
+
+
+Testing Scala features on Android (and also building without a hacky plugin).
+
+Using proguard lets you build Scala without any hacky plugins. Shockingly,
+I never actually saw anyone attempt to try this, but glad I did.
+Maybe it's because people assume nothing can be that easy when it comes to java related tools :p.
+This has the benefit of still be compiled with the intellij build system, yay.
+
+To build in Intellij:
+
+Prerequisites:
+
+1) Get Scala (http://www.scala-lang.org/)
+2) Add a Scala facet to the project, setting up the compiler. You may have to create a separate throwaway Scala module first
+if no Scala plugin has already been added globally. More directions located here: http://confluence.jetbrains.com/display/SCA/Setting+up+Scala+plugin+project+in+IntelliJ+IDEA (note that scala compiler is now its own section and not under compiler as of IDEA 12.1)
+3) Set up the Scala facet for the Android project (add continuations if you wish)
+4) Add the following jars as libraries to the project (or globally):
+    continuations.jar (if you want to use them)
+    scala-actors.jar
+    scala-library.jar
+5) Make sure the library is also set as a dependency for all modules you use Scala with.
+
+Compiling your Project:
+
+1) Use the given proguard file in this project
+2) Change any references to com.example.android_scala to your package
+3) Change any references to com.example.android_scala.MyActivity to your Main Activity
+4) Add all jar references to your proguard file pointing to your scala and other libraries
+5) Enable proguard for the building of the project via the following :
+Go to: file → project settings → modules → select module(s) → compiler tab → enable proguard
+6) Build project like normal
+7) Run the application
+This file was modified by IntelliJ IDEA 12.1.3 for binding GitHub repository
