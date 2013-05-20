@@ -51,7 +51,7 @@ Compiling your Project:
 
 3) Change any references to com.example.android_scala.MyActivity to your Main Activity
 
-4) Add all jar references to your proguard file pointing to your scala and other libraries
+4) Add all jar references to your proguard file pointing to your scala and other libraries. Probably not needed though if you did step #4 correctly under prerequisites.
 
 5) Enable proguard for the building of the project via the following :
 Go to: file → project settings → modules → select module(s) → compiler tab → enable proguard
