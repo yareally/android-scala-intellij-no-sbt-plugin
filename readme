@@ -38,4 +38,3 @@ Compiling your Project:
 Go to: file → project settings → modules → select module(s) → compiler tab → enable proguard
 6) Build project like normal
 7) Run the application
-This file was modified by IntelliJ IDEA 12.1.3 for binding GitHub repository
