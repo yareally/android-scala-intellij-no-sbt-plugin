@@ -23,7 +23,7 @@ A: Nothing as far as I know so far.
 --
 Q: Why does Proguard work?
 
-A: There's way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess.
+A: There's way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess (otherwise, you'll get errors like Android Dex: [android-scala] trouble writing output: Too many methods: 66095; max is 65536.).
 
 
 To build in Intellij:
