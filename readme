@@ -41,7 +41,7 @@ Prerequisites:
 
 2) Add a Scala facet to the project, setting up the compiler. You may have to create a separate throwaway Scala module first if no Scala plugin has already been added globally. More directions located here: http://confluence.jetbrains.com/display/SCA/Setting+up+Scala+plugin+project+in+IntelliJ+IDEA (note that scala compiler is now its own section and not under compiler as of IDEA 12.1)
 
-3) Set up the Scala facet for the Android project (add continuations if you wish)
+3) Set up the Scala facet for the Android project (add continuations if you wish). Alternatively, setting up a Scala project and then adding an Android Facet might be easier for some.
 
 4) Add the following jars as libraries to the project (or globally):
     continuations.jar (if you want to use them)
