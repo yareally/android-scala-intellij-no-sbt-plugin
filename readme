@@ -13,11 +13,17 @@ Using proguard lets you build Scala without any hacky plugins. Shockingly, I nev
 
 FAQ:
 
-Q: What works? Everything as far as I can tell.
+Q: What works? 
 
+A:Everything as far as I can tell.
+--
 Q: What doesn't work?
 
-Nothing as far as I know so far.
+A: Nothing as far as I know so far.
+--
+Q: Why does Proguard work?
+
+A: There's way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess.
 
 
 To build in Intellij:
