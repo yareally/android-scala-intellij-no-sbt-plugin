@@ -24,7 +24,7 @@ To build in Intellij:
 
 Prerequisites:
 
-1) Get Scala (http://www.scala-lang.org/)
+1) Get Scala (http://www.scala-lang.org/). If you don't have the Scala plugin for Intellij, you need that too of course.
 
 2) Add a Scala facet to the project, setting up the compiler. You may have to create a separate throwaway Scala module first if no Scala plugin has already been added globally. More directions located here: http://confluence.jetbrains.com/display/SCA/Setting+up+Scala+plugin+project+in+IntelliJ+IDEA (note that scala compiler is now its own section and not under compiler as of IDEA 12.1)
 
