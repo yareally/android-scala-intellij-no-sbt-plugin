@@ -9,10 +9,7 @@ Just do the following instead:
 
 Testing Scala features on Android (and also building without any additional plugins).
 
-Using proguard lets you build Scala without any hacky plugins. Shockingly,
-I never actually saw anyone attempt to try this, but glad I did.
-Maybe it's because people assume nothing can be that easy when it comes to java related tools :p.
-This has the benefit of still be compiled with the intellij build system, yay.
+Using proguard lets you build Scala without any hacky plugins. Shockingly, I never actually saw anyone attempt to try this, but glad I did. Maybe it's because people assume nothing can be that easy when it comes to java related tools :p. This has the benefit of still being compiled with the intellij build system, yay.
 
 To build in Intellij:
 
