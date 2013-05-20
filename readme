@@ -20,6 +20,10 @@ A:Everything as far as I can tell.
 Q: What doesn't work?
 
 A: Nothing as far as I know so far.
+
+Q: What version of Scala did you test with?
+
+A: 2.10.1, the latest stable as of 2013-05-19
 --
 Q: Why does Proguard work?
 
