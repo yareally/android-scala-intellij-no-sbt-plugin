@@ -4,7 +4,7 @@ Before you had to use something like this with sbt and build externally:
 
 https://github.com/jberkel/android-plugin (props to the maintainers/creators, but there's an easier way!)
 
-That's now a thing of the past! Just do the following instead:
+Just do the following instead:
 
 
 Testing Scala features on Android (and also building without a hacky plugin).
