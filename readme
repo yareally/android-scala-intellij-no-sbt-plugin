@@ -28,7 +28,10 @@ A: 2.10.1, the latest stable as of 2013-05-19
 Q: Why does Proguard work?
 
 A: There's way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess (otherwise, you'll get errors like Android Dex: [android-scala] trouble writing output: Too many methods: 66095; max is 65536.).
+--
+Q: Does Google's Android Studio work, since it's based on Intellij?
 
+A: I don't know as I dont' use it normally. Google crippled plugins by default (no Scala plugin). You're welcome to deal with the headaches of uncrippling it :)
 
 To build in Intellij:
 
