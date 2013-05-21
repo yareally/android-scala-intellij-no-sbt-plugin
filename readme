@@ -15,15 +15,19 @@ FAQ:
 
 Q: What works? 
 
-A:Everything as far as I can tell.
+A:Everything as far as I can tell (even debugging)
 --
 Q: What doesn't work?
 
 A: Nothing as far as I know so far.
-
+--
 Q: What version of Scala did you test with?
 
 A: 2.10.1, the latest stable as of 2013-05-19
+--
+Q: How is debugging possible?
+
+A: Proguard is set not to obfusticate so it doesn't remove the debugging symbols. That's really the key to my guide.
 --
 Q: Why does Proguard work?
 
@@ -31,7 +35,8 @@ A: There's way too many methods in Scala for the dalvik compiler (dx) to handle 
 --
 Q: Does Google's Android Studio work, since it's based on Intellij?
 
-A: I don't know as I dont' use it normally. Google crippled plugins by default (no Scala plugin). You're welcome to deal with the headaches of uncrippling it :)
+A: I don't know as I don't use it normally. Google crippled plugins by default (no Scala plugin, though you can probably import it maybe). You're welcome to deal with the headaches of uncrippling it :)
+---
 
 To build in Intellij:
 
