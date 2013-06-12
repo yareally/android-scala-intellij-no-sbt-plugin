@@ -52,6 +52,8 @@
 -dontwarn scala.concurrent.forkjoin.**
 -dontwarn scala.reflect.**
 -dontwarn scala.sys.process.**
+-dontwarn scala.swing.**
+-dontwarn scala.concurrent.**
 -dontwarn scala.tools.**,plugintemplate.**
 
 -dontnote org.xml.sax.EntityResolver
