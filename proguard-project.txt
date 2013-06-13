@@ -63,6 +63,11 @@
 
 -dontnote scala.android.app.Activity
 
+## don't let proguard screw around with actionbar sherlock (else you'll get vague errors and blame scala probably)
+-keepclassmembers class * extends com.actionbarsherlock.ActionBarSherlock {
+    <init>(android.app.Activity, int);
+}
+
 ## Fixes ==> Warning: ... can't find referenced class sun.misc.Unsafe
 -libraryjars "libs\scala-actors.jar";"libs\scala-library.jar"
 -dontwarn sun.misc.Unsafe
