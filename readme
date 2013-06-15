@@ -11,6 +11,8 @@ Testing Scala features on Android (and also building without any additional plug
 
 Using proguard lets you build Scala without any extra plugins and sbt fiddling. Shockingly, I never actually saw anyone attempt to try this, but glad I did. Maybe it's because people assume nothing can be that easy when it comes to java related tools :p. This has the benefit of still being compiled with the intellij build system, yay.
 
+Caveats: Any Android library that requires custom annotation processing may not work (such as http://androidannotations.org/). Just mentioning it now if you find yourself spending way too much time with errors that make no sense. More information about it can be found here: http://stackoverflow.com/questions/7454018/using-androidannotations-with-scala-and-gradle
+
 FAQ:
 
 Q: What works? 
@@ -27,7 +29,7 @@ A: 2.10.1, the latest stable as of 2013-05-19
 --
 Q: How is debugging possible?
 
-A: Proguard is set not to obfusticate so it doesn't remove the debugging symbols. That's really the key to my guide.
+A: Proguard is set not to obfusticate so it doesn't remove the debugging symbols. That's really the key to my guide. Proguard can be tricky, but I've taken care of most of the common edge cases you might encounter with the included proguard file in this repository. If you encounter any I missed, just let me know. Things like actionbar sherlock and other libraries should work fine though.
 --
 Q: Why does Proguard work?
 
