@@ -63,11 +63,6 @@
 
 -dontnote scala.android.app.Activity
 
-## don't let proguard screw around with actionbar sherlock (else you'll get vague errors and blame scala probably)
--keepclassmembers class * extends com.actionbarsherlock.ActionBarSherlock {
-    <init>(android.app.Activity, int);
-}
-
 ## Fixes ==> Warning: ... can't find referenced class sun.misc.Unsafe
 -libraryjars "libs\scala-actors.jar";"libs\scala-library.jar"
 -dontwarn sun.misc.Unsafe
@@ -90,5 +85,43 @@
 
 -keepattributes Exceptions,InnerClasses,Signature,Deprecated,
             SourceFile,LineNumberTable,Annotation,EnclosingMethod
-
+            
+# line below is probably not needed now with the addition of the lines that follow it
 -keep class com.example.android_scala**
+
+# these should hopefully make any specific changes for a new project no longer needed so you can just drop in the proguard file
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+## don't let proguard screw around with actionbar sherlock (else you'll get vague errors and blame scala probably)
+-keepclassmembers class * extends com.actionbarsherlock.ActionBarSherlock {
+    <init>(android.app.Activity, int);
+}
+
