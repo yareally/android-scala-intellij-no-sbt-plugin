@@ -44,8 +44,9 @@
 #}
 #(org.xml.sax.EntityResolver)Class.forName(variable).newInstance()
 
+# -------- This should work for any project now without modifications just drop it in your project and you're set -------
+
 -dontwarn **$$anonfun$*
--dontwarn com.example.android_scala**
 -dontwarn scala.beans.ScalaBeanInfo
 -dontwarn scala.collection.generic.GenTraversableFactory
 -dontwarn scala.collection.immutable.RedBlack$Empty
@@ -61,10 +62,7 @@
 #(org.apache.james.mime4j.storage.StorageProvider)Class.forName(variable).newInstance()
 -dontnote org.apache.james.mime4j.storage.DefaultStorageProvider
 
--dontnote scala.android.app.Activity
-
 ## Fixes ==> Warning: ... can't find referenced class sun.misc.Unsafe
-#-libraryjars "libs\scala-actors.jar";"libs\scala-library.jar"
 -dontwarn sun.misc.Unsafe
 
 -dontobfuscate
@@ -85,9 +83,6 @@
 
 -keepattributes Exceptions,InnerClasses,Signature,Deprecated,
             SourceFile,LineNumberTable,Annotation,EnclosingMethod
-            
-# line below is probably not needed now with the addition of the lines that follow it
--keep class com.example.android_scala**
 
 # these should hopefully make any specific changes for a new project no longer needed so you can just drop in the proguard file
 -keep public class * extends android.app.Activity
@@ -125,3 +120,8 @@
     <init>(android.app.Activity, int);
 }
 
+# lines below are probably not needed anymore, but if you're ever getting proguard errors, change them to match your packages and paths.
+#-keep class com.example.android_scala**
+#-dontwarn com.example.android_scala**
+#-libraryjars "libs\scala-actors.jar";"libs\scala-library.jar"
+#-dontnote com.example.android_scala.Activity
