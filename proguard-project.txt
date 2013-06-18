@@ -64,7 +64,7 @@
 -dontnote scala.android.app.Activity
 
 ## Fixes ==> Warning: ... can't find referenced class sun.misc.Unsafe
--libraryjars "libs\scala-actors.jar";"libs\scala-library.jar"
+#-libraryjars "libs\scala-actors.jar";"libs\scala-library.jar"
 -dontwarn sun.misc.Unsafe
 
 -dontobfuscate
