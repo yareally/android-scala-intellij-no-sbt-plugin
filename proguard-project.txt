@@ -59,6 +59,11 @@
 
 -dontnote org.xml.sax.EntityResolver
 
+# fixes an issue with async/await (https://issues.scala-lang.org/browse/SI-5397)
+-keep class scala.collection.SeqLike {
+    public protected *;
+}
+
 #(org.apache.james.mime4j.storage.StorageProvider)Class.forName(variable).newInstance()
 -dontnote org.apache.james.mime4j.storage.DefaultStorageProvider
 
