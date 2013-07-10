@@ -74,3 +74,6 @@ Go to: file → project settings → modules → select module(s) → compiler t
 6) Build project like normal
 
 7) Run the application
+
+A small example of using async/await I did with Android is located here: https://gist.github.com/yareally/5941489
+Note that it also requires the play framework's json library (which can now be used standalone). 
