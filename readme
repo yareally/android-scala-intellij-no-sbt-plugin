@@ -22,6 +22,19 @@ Q: What doesn't work?
 
 A: Nothing as far as I know so far.
 --
+Q: Why use this over the sbt plugin?
+
+A: A few reasons:
+
+- No additional tools or code needed (other than ProGuard) so less potential for bugs or issues with Intellij/Android updates.
+
+- Simpify your build process by doing what you normally do when building apps in Intellij.
+
+- You're used to using Java and would like to keep building apps mostly how you did beforehand.
+
+- Don't need a formal build system like sbt or just want to start writing code instead of also learning a useful, but somewhat complex build system.
+
+--
 Q: What version of Scala did you test with?
 
 A: 2.10.2, the latest stable as of 2013-06-15
