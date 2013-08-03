@@ -1,4 +1,4 @@
-Want to use Scala on Android with Intellij without having to resort to additional plugins or losing any awesome Intellij features? 
+Want to use Scala on Android with Intellij without having to bring the entire sbt build system into your life and the pros/cons it provides?
 
 Before you had to use something like this with sbt and build externally:
 
@@ -7,9 +7,7 @@ https://github.com/jberkel/android-plugin (props to the maintainers/creators, bu
 Just do the following instead:
 
 
-Testing Scala features on Android (and also building without any additional plugins).
-
-Using proguard lets you build Scala without any extra plugins and sbt fiddling. Shockingly, I never actually saw anyone attempt to try this, but glad I did. Maybe it's because people assume nothing can be that easy when it comes to java related tools :p. This has the benefit of still being compiled with the intellij build system, yay.
+--- Testing Scala features on Android (and also building without any additional plugins) ---
 
 -- Caveats --
 Any Android library that requires custom annotation processing may not work (such as http://androidannotations.org/). Just mentioning it now if you find yourself spending way too much time with errors that make no sense. More information about it can be found here: http://stackoverflow.com/questions/7454018/using-androidannotations-with-scala-and-gradle
