@@ -67,7 +67,7 @@ Prerequisites:
     scala-actors.jar
     scala-library.jar
     
-- Note that scala core libraries are under /scala-install-dir/libs/ and continuations is under /scala-install-dir/misc/scala-devel/plugins/
+- Note that scala core libraries are under /path-to-scala-install-dir/libs/ and continuations is under /path-to-scala-install-dir/misc/scala-devel/plugins/
 
 5) Make sure the library (the current scala module you are creating) is also set as a dependency for all modules you use Scala module with.
 
