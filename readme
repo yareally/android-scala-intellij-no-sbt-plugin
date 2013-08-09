@@ -62,31 +62,27 @@ Prerequisites:
 
 3) Set up the Scala facet for the Android project (add continuations if you wish). Alternatively, setting up a Scala project and then adding an Android Facet might be easier for some.
 
-4) Add the following jars as libraries to the project (or globally):
-    continuations.jar (if you want to use them)
+4) Add the following jars as libraries to your project (or globally):
+    continuations.jar (if you want to use them [or anything that depends on continuations like Akka or Scala Async])
     scala-actors.jar
     scala-library.jar
 
-5) Make sure the library is also set as a dependency for all modules you use Scala with.
+5) Make sure the library (the current scala module you are creating) is also set as a dependency for all modules you use Scala module with.
 
 Compiling your Project:
 
-1) Use the given proguard file in this project
+1) Use the given proguard file in this project (should work for any basic project without modification, if you encounter an issue when adding a library, let me know and I can add a case for it).
 
-2) Change any references to com.example.android_scala to your package
-
-3) Change any references to com.example.android_scala.MyActivity to your Main Activity
-
-4) Add all jar references to your proguard file pointing to your scala and other libraries. Probably not needed though if you did step #4 correctly under prerequisites.
+2) Add all jar references to your proguard file pointing to your scala and other libraries. Probably not needed though if you did step #4 correctly under prerequisites.
 
 5) Enable proguard for the building of the project via the following :
 Go to: file → project settings → modules → select module(s) → compiler tab → enable proguard
 
-6) Build project like normal
+6) Build project like how you would normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root).
 
 7) Run the application
 
 A small example of using async/await I did with Android is located here: https://gist.github.com/yareally/5941489
-Note that it also requires the play framework's json library (which can now be used standalone). 
+Note that it also requires continuations and the play framework's json library (which can now be used standalone). 
 
 If you have questions, just create an issue and I'll reply when I can.
