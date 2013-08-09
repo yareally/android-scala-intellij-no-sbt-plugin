@@ -69,7 +69,10 @@ Prerequisites:
     
  -Scala core libraries are under /path-to-scala-install-dir/libs/ and continuations is under /path-to-scala-install-dir/misc/scala-devel/plugins/
 
-5) Make sure the library (the current scala module you are creating) is also set as a dependency for all modules you use Scala module with.
+5) Make sure the library/libraries created above are set as a dependency for all modules you create a Scala facet (step 2).
+
+ -If you create any additional modules not using Scala (like Java only ones), but wish to use code you wrote from a module with a Scala facet, you just have to add that Scala module as a dependency to the Java only module as you would normally in Intellij.
+
 
 Compiling your Project:
 
