@@ -7,6 +7,8 @@ https://github.com/jberkel/android-plugin (props to the maintainers/creators, bu
 Just do the following instead:
 
 
+Text based directions are below, but until I have time to do it myself with markdown, more detailed directions and images can be found here thanks to a helpful user: http://stackoverflow.com/a/17515300/1643939
+
 -- Testing Scala features on Android (and also building without any additional plugins) --
 
 -- Caveats --
