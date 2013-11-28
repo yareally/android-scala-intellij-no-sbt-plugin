@@ -89,11 +89,11 @@ Feel free to create an issue and/or send a pull request.
   If you create any additional modules not using Scala (like Java only ones), but wish to use code you wrote from a module with a Scala facet, you just have to add that Scala module as a dependency to the Java only module as you would normally in Intellij.
 
 
-### Compiling your Project
+### Adding Proguard to the Project
 
-1. Use the given proguard file in this project.  (should work for any basic project without modification, if you encounter an issue when adding a library, let me know and I can add a case for it).
+1. Use the given proguard file in this project. It should work for most projects without modifications. If you encounter an issue when adding a library, let me know and I can add a proguard fix for it.
 
-2. Enable proguard for the building of the project via the following :
+2. Enable proguard for the building of the project via the following:
 
 #### Intellij 12
 
@@ -105,6 +105,8 @@ Feel free to create an issue and/or send a pull request.
 
   Make sure both your project proguard file (proguard-project.txt) and the Android SDK provided one (found under */android-sdk-home/tools/proguard/proguard-android.txt*) are both added to the list below the checkbox.
 
-3. Build project like how you would normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin).
+### Compiling your Project
 
-4. Run the application
+1. After adding Proguard, build the project like how you would a normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin).
+
+2. Run the application
