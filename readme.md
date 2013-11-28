@@ -84,7 +84,7 @@ Feel free to create an issue and/or send a pull request.
 
   + continuations.jar (optional, though it's required for actors, futures, promises, async/await, etc). The jar is in your scala install directory under */path-to-scala-install-dir/misc/scala-devel/plugins*.
 
-6. Make sure the libraries created above are set as a dependency for all modules you add a Scala facet from step 2. Module dependencies are set via *File → Project Structure → Modules → Dependencies Tab*.
+5. Make sure the libraries created above are set as a dependency for all modules you add a Scala facet from step 2. Module dependencies are set via *File → Project Structure → Modules → Dependencies Tab*.
 
   If you create any additional modules not using Scala (like Java only ones), but wish to use code you wrote from a module with a Scala facet, you just have to add that Scala module as a dependency to the Java only module as you would normally in Intellij.
 
