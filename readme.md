@@ -17,7 +17,7 @@ Any Android library that requires custom annotation processing may not work [suc
 
 ## Examples
 
-Aside from the minimal code showing that Scala works on Android, here's some more elaborate [source code](https://github.com/yareally/SignalInfo/tree/scala) to a Scala Android app I built using a few popular libraries ([ActionBarSherlock](http://actionbarsherlock.com), [support.GridLayout](http://developer.android.com/tools/support-library/features.html#v7-appcompat) and [loaderex]](https://github.com/commonsguy/cwac-loaderex)).
+Aside from the minimal code showing that Scala works on Android, here's some more elaborate [source code](https://github.com/yareally/SignalInfo/tree/scala) to a Scala Android app I built using a few popular libraries [ActionBarSherlock](http://actionbarsherlock.com), [support.GridLayout](http://developer.android.com/tools/support-library/features.html#v7-appcompat) and [loaderex](https://github.com/commonsguy/cwac-loaderex)).
 
 A [small example](A small example of using async/await I did with Android is located here: https://gist.github.com/yareally/5941489) using Typesafe's Async/Await library. Also requires adding the continuations library (directions below for adding it).
 
@@ -45,23 +45,23 @@ A [small example](A small example of using async/await I did with Android is loc
 
 ### What version of Scala did you test with?
 
-: 2.10.3, the latest stable as of 2013-11-27
+2.10.3, the latest stable as of 2013-11-27
 
 ### How is debugging possible?
 
-: Proguard is set not to obfuscate so it doesn't remove the debugging symbols. That's really the key to my guide. Proguard can be tricky, but I've taken care of most of the common edge cases you might encounter with the included proguard file in this repository. If you encounter any I missed, just let me know. Things like actionbar sherlock and other libraries should work fine though.
+Proguard is set not to obfuscate so it doesn't remove the debugging symbols. That's really the key to my guide. Proguard can be tricky, but I've taken care of most of the common edge cases you might encounter with the included proguard file in this repository. If you encounter any I missed, just let me know. Things like actionbar sherlock and other libraries should work fine though.
 
 ### Why does Proguard work?
 
-: There's way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess (otherwise, you'll get errors like Android Dex: [android-scala] trouble writing output: Too many methods: 66095; max is 65536.).
+There's way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess (otherwise, you'll get errors like Android Dex: [android-scala] trouble writing output: Too many methods: 66095; max is 65536.).
 
 ### Does Google's Android Studio work, since it's based on Intellij?
 
-: It should, but I have not tested a Gradle based project with Intellij IDEA 13 or Android Studio yet.
+It should, but I have not tested a Gradle based project with Intellij IDEA 13 or Android Studio yet.
 
 ### I have questions or want to add examples or documentation to this guide
 
-: Feel free to create an issue and/or send a pull request.
+Feel free to create an issue and/or send a pull request.
 
 
 ## [Building with Intellij IDEA 12+][building]
