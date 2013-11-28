@@ -59,7 +59,7 @@ There's way too many methods in Scala for the dalvik compiler (dx) to handle if 
 
 ### Does Google's Android Studio work, since it's based on Intellij?
 
-It should, but I have not tested a Gradle based project with Intellij IDEA 13 or Android Studio yet.
+It should fine without Gradle. If wishing to use Gradle, it would require more work. I have not tested a Gradle based project with Intellij IDEA 13 or Android Studio yet.
 
 ### I have questions or want to add examples or documentation to this guide
 
