@@ -8,7 +8,7 @@ Before you had to use something [like this with sbt](https://github.com/jberkel/
 
 ## Setup & Directions
 
-[Text based directions](https://github.com/yareally/android-scala-intellij-no-sbt-plugin/blob/master/readme.md#building-with-intellij-idea-12building). I'll add some images soon.
+[Text based directions](https://github.com/yareally/android-scala-intellij-no-sbt-plugin/blob/master/readme.md#building-with-intellij-idea-12). I'll add some images soon.
 
 Until I add some images in this guide, directions with images can be [found here](http://stackoverflow.com/a/17515300/1643939) thanks to a helpful user.
 
@@ -35,7 +35,7 @@ Nothing as far as I know so far.
 
 ### Why use this over the sbt plugin?
 
-A few reasons:
+#### A few reasons:
 
 - No additional tools or code needed (other than ProGuard) so less potential for bugs or issues with Intellij/Android updates.
 
@@ -66,7 +66,7 @@ It should, but I have not tested a Gradle based project with Intellij IDEA 13 or
 Feel free to create an issue and/or send a pull request.
 
 
-## Building with Intellij IDEA 12+
+## Building with Intellij IDEA 12+ or Android Studio
 
 ### Prerequisites
 
@@ -89,7 +89,7 @@ Feel free to create an issue and/or send a pull request.
 - If you create any additional modules not using Scala (like Java only ones), but wish to use code you wrote from a module with a Scala facet, you just have to add that Scala module as a dependency to the Java only module as you would normally in Intellij.
 
 
-Compiling your Project:
+### Compiling your Project:
 
 1. Use the given proguard file in this project.  (should work for any basic project without modification, if you encounter an issue when adding a library, let me know and I can add a case for it).
 
