@@ -103,8 +103,8 @@ Feel free to create an issue and/or send a pull request.
 
   Go to: *File → project settings → modules → select module(s) → compiler tab → check Run Proguard checkbox*
 
-  + Make sure both your project proguard file (proguard-project.txt) and the Android SDK provided one (found under */android-sdk-home/tools/proguard/proguard-android.txt*) are both added to the list below the checkbox.
+  Make sure both your project proguard file (proguard-project.txt) and the Android SDK provided one (found under */android-sdk-home/tools/proguard/proguard-android.txt*) are both added to the list below the checkbox.
 
-6. Build project like how you would normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin).
+3. Build project like how you would normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin).
 
-7. Run the application
+4. Run the application
