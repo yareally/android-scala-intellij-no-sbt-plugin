@@ -82,7 +82,7 @@ Feel free to create an issue and/or send a pull request.
 
   + scala-library.jar (*/path-to-scala-install-dir/libs/*)
 
-  + continuations.jar (optional, though it's required for actors, futures, promises, async/await, etc). The jar is in your scala install directory under */path-to-scala-install-dir/misc/scala-devel/plugins*
+  + continuations.jar (optional, though it's required for actors, futures, promises, async/await, etc). The jar is in your scala install directory under */path-to-scala-install-dir/misc/scala-devel/plugins*.
 
 5. Make sure the libraries created above are set as a dependency for all modules you add a Scala facet from step 2. Module dependencies are set via *File → Project Structure → Modules → Dependencies Tab*.
 
