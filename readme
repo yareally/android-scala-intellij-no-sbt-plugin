@@ -6,15 +6,14 @@ https://github.com/jberkel/android-plugin (props to the maintainers/creators, bu
 
 Just do the following instead:
 
-
 Text based directions are below, but until I have time to do it myself with markdown, more detailed directions and images can be found here thanks to a helpful user: http://stackoverflow.com/a/17515300/1643939
 
 -- Testing Scala features on Android (and also building without any additional plugins) --
 
 -- Caveats --
-Any Android library that requires custom annotation processing may not work (such as http://androidannotations.org/). 
+Any Android library that requires custom annotation processing may not work (such as http://androidannotations.org/). Just mentioning it now if you find yourself spending way too much time with errors that make no sense. 
 
-Just mentioning it now if you find yourself spending way too much time with errors that make no sense. More information about it can be found here: http://stackoverflow.com/questions/7454018/using-androidannotations-with-scala-and-gradle
+More information about it can be found here: http://stackoverflow.com/questions/7454018/using-androidannotations-with-scala-and-gradle
 
 -- Examples --
 Source to a Scala Android App I built using a few popular libraries (ActionBarSherlock, support.GridLayout, loaderex) can be found here: 
