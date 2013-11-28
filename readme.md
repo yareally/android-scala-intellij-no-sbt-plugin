@@ -8,7 +8,7 @@ Before you had to use something [like this with sbt](https://github.com/jberkel/
 
 ## Setup & Directions
 
-[Text based directions](https://github.com/yareally/android-scala-intellij-no-sbt-plugin/blob/master/readme.md#building-with-intellij-idea-12). I'll add some images soon.
+[Text based directions are below](https://github.com/yareally/android-scala-intellij-no-sbt-plugin/blob/master/readme.md#building-with-intellij-idea-12). I'll add some images soon.
 
 Until I add some images in this guide, directions with images can be [found here](http://stackoverflow.com/a/17515300/1643939) thanks to a helpful user.
 
