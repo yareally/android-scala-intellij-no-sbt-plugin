@@ -74,16 +74,17 @@ Feel free to create an issue and/or send a pull request.
 
 2. Add a Scala facet to the project, and set up the compiler (I recommend using at least Scala 10.x). You may have to [create a separate throwaway Scala module](http://confluence.jetbrains.com/display/SCA/Setting+up+Scala+plugin+project+in+IntelliJ+IDEA) first if no Scala plugin has already been added globally. Note that scala compiler is now its own section and not under compiler as of IDEA 12.1.
 
-3. Set up the Scala facet for the Android project (add continuations if you wish). Alternatively, setting up a Scala project and then adding an Android Facet might be easier for some. It's possible to do this while creating a new project or for an exising project via (*File → Project Structure → Facets*)
+3. Set up the Scala facet for the Android project (add continuations if you wish). Alternatively, setting up a Scala project and then adding an Android Facet might be easier for some. It's possible to do this while creating a new project or for an exising project via *File → Project Structure → Facets*
 
-4. Add the following jars as libraries to your project (via *File → Project Structure → Libraries*):
+4. Add the following jars as libraries to your project via *File → Project Structure → Libraries*:
 
-  + scala-actors.jar (under */path-to-scala-install-dir/libs/*)
+  + scala-actors.jar under */path-to-scala-install-dir/libs/*
 
-  + scala-library.jar (*/path-to-scala-install-dir/libs/*)
+  + scala-library.jar under */path-to-scala-install-dir/libs/*
 
   + continuations.jar (optional, though it's required for actors, futures, promises, async/await, etc). The jar is in your scala install directory under */path-to-scala-install-dir/misc/scala-devel/plugins*.
-5. Make sure the libraries created above are set as a dependency for all modules you add a Scala facet from step 2. Module dependencies are set via *File → Project Structure → Modules → Dependencies Tab*.
+
+6. Make sure the libraries created above are set as a dependency for all modules you add a Scala facet from step 2. Module dependencies are set via *File → Project Structure → Modules → Dependencies Tab*.
 
   If you create any additional modules not using Scala (like Java only ones), but wish to use code you wrote from a module with a Scala facet, you just have to add that Scala module as a dependency to the Java only module as you would normally in Intellij.
 
