@@ -8,7 +8,9 @@ Before you had to use something [like this with sbt](https://github.com/jberkel/
 
 ## Setup & Directions
 
-Text based directions are below, but until I have time to do it myself with markdown, more detailed directions and images can be [found here](http://stackoverflow.com/a/17515300/1643939) thanks to a helpful user.
+[Text based directions](https://github.com/yareally/android-scala-intellij-no-sbt-plugin/blob/master/readme.md#building-with-intellij-idea-12building). I'll add some images soon.
+
+Until I add some images in this guide, directions with images can be [found here](http://stackoverflow.com/a/17515300/1643939) thanks to a helpful user.
 
 
 ## Caveats
@@ -25,15 +27,15 @@ A [small example](A small example of using async/await I did with Android is loc
 
 ### What works?
 
-: Everything as far as I can tell (even debugging)
+Everything as far as I can tell (even debugging)
 
 ### What doesn't work?
 
-: Nothing as far as I know so far.
+Nothing as far as I know so far.
 
 ### Why use this over the sbt plugin?
 
-: A few reasons:
+A few reasons:
 
 - No additional tools or code needed (other than ProGuard) so less potential for bugs or issues with Intellij/Android updates.
 
@@ -64,7 +66,7 @@ It should, but I have not tested a Gradle based project with Intellij IDEA 13 or
 Feel free to create an issue and/or send a pull request.
 
 
-## [Building with Intellij IDEA 12+][building]
+## Building with Intellij IDEA 12+
 
 ### Prerequisites
 
@@ -89,13 +91,16 @@ Feel free to create an issue and/or send a pull request.
 
 Compiling your Project:
 
-1. Use the given proguard file in this project (should work for any basic project without modification, if you encounter an issue when adding a library, let me know and I can add a case for it).
+1. Use the given proguard file in this project.  (should work for any basic project without modification, if you encounter an issue when adding a library, let me know and I can add a case for it).
 
 2. Add all jar references to your proguard file pointing to your scala and other libraries. Probably not needed though if you did step #4 correctly under prerequisites.
 
 5. Enable proguard for the building of the project via the following :
-Go to: file → project settings → modules → select module(s) → compiler tab → enable proguard
 
-6. Build project like how you would normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root).
+(Intellij 12) Go to: File → project settings → modules → select module(s) → compiler tab → enable proguard
+
+(Intellij 13/Android Studio) Go to: *File → project settings → modules → select module(s) → compiler tab → check Run Proguard checkbox*. Make sure both your project proguard file (proguard-project.txt) and the Android SDK provided one (found under */android-sdk-home/tools/proguard/proguard-android.txt*) are both added to the list below the checkbox.
+
+6. Build project like how you would normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin).
 
 7. Run the application
