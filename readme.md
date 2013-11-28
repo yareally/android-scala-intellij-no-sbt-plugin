@@ -93,15 +93,13 @@ Feel free to create an issue and/or send a pull request.
 
 1. Use the given proguard file in this project.  (should work for any basic project without modification, if you encounter an issue when adding a library, let me know and I can add a case for it).
 
-2. Add all jar references to your proguard file pointing to your scala and other libraries. Probably not needed though if you did step #4 correctly under prerequisites.
-
-5. Enable proguard for the building of the project via the following :
+2. Enable proguard for the building of the project via the following :
 
 #### Intellij 12
 
 Go to: File → project settings → modules → select module(s) → compiler tab → enable proguard
 
-#### Intellij 13/Android Studio 
+#### Intellij 13 / Android Studio 
 
 Go to: *File → project settings → modules → select module(s) → compiler tab → check Run Proguard checkbox*
 
