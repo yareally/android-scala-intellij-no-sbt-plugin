@@ -107,6 +107,6 @@ Feel free to create an issue and/or send a pull request.
 
 ### Compiling your Project
 
-1. After adding Proguard, build the project like how you would a normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin).
+1. After adding proguard, build the project like how you would a normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin).
 
 2. Run the application
