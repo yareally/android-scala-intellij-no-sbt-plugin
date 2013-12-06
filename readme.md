@@ -10,8 +10,6 @@ Before you had to use something [like this with sbt](https://github.com/jberkel/
 
 [Text based directions are below](https://github.com/yareally/android-scala-intellij-no-sbt-plugin/blob/master/readme.md#building-with-intellij-idea-12-or-android-studio). I'll add some images soon.
 
-Until I add some images in this guide, directions with images can be [found here](http://stackoverflow.com/a/17515300/1643939) thanks to a helpful user.
-
 
 ## Caveats
 
@@ -76,6 +74,8 @@ Feel free to create an issue and/or send a pull request.
 
 3. Set up the Scala facet for the Android project (add continuations if you wish). Alternatively, setting up a Scala project and then adding an Android Facet might be easier for some. It's possible to do this while creating a new project or for an exising project via *File → Project Structure → Facets*
 
+  ![module settings](/pics/facets.png "Project Facets")
+
 4. Add the following jars as libraries to your project via *File → Project Structure → Libraries*:
 
   **scala-actors.jar** under */path-to-scala-install-dir/libs/*
@@ -85,6 +85,10 @@ Feel free to create an issue and/or send a pull request.
   **continuations.jar** (optional, though it's required for actors, futures, promises, async/await, etc). The jar is in your scala install directory under */path-to-scala-install-dir/misc/scala-devel/plugins*.
 
 5. Make sure the libraries created above are set as a dependency for all modules you add a Scala facet from step 2. Module dependencies are set via *File → Project Structure → Modules → Dependencies Tab*.
+
+  ![module settings](/pics/modules-deps.png "Android Project Dependencies")
+
+  ![module settings](/pics/modules-scala.png "Scala Project Dependencies")
 
   If you create any additional modules not using Scala (like Java only ones), but wish to use code you wrote from a module with a Scala facet, you just have to add that Scala module as a dependency to the Java only module as you would normally in Intellij.
 
@@ -99,14 +103,18 @@ Feel free to create an issue and/or send a pull request.
 
   Go to: File → project settings → modules → select module(s) → compiler tab → enable proguard
 
-#### Intellij 13 / Android Studio 
+#### Intellij 13 / Android Studio
 
   Go to: *File → project settings → modules → select module(s) → compiler tab → check Run Proguard checkbox*
+
+  ![module settings](/pics/modules.png "Compiler Settings")
 
   Make sure both your project proguard file (proguard-project.txt) and the Android SDK provided one (found under */android-sdk-home/tools/proguard/proguard-android.txt*) are both added to the list below the checkbox.
 
 ### Compiling your Project
 
-1. After adding proguard, build the project like how you would a normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin).
+1. After adding proguard, build the project like how you would a normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin). You should see no errors in the example activity (other than a highlight bug on * symbol for the test() method you can ignore). If anyone has time, feel free to file an issue about it with JetBrains, but it's not a major issue.
+
+  ![module settings](/pics/activity.png "Android Project Dependencies")
 
 2. Run the application
