@@ -115,6 +115,6 @@ Feel free to create an issue and/or send a pull request.
 
 1. After adding proguard, build the project like how you would a normal Java Android project. Proguard is a little slow, but it's required unless you preload the libraries onto the device (which requires root or using the previously mentioned sbt plugin). You should see no errors in the example activity (other than a highlight bug on * symbol for the test() method you can ignore). If anyone has time, feel free to file an issue about it with JetBrains, but it's not a major issue.
 
-![module settings](/pics/activity.png "Android Project Dependencies")
+  ![module settings](/pics/activity.png "Android Project Dependencies")
 
 2. Run the application
