@@ -86,9 +86,9 @@ Feel free to create an issue and/or send a pull request.
 
 5. Make sure the libraries created above are set as a dependency for all modules you add a Scala facet from step 2. Module dependencies are set via *File → Project Structure → Modules → Dependencies Tab*.
 
-  ![module settings](/pics/module-deps.png "Android Project Dependencies")
+  ![module settings](/pics/modules-deps.png "Android Project Dependencies")
   
-  ![module settings](/pics/module-scala.png "Scala Project Dependencies")
+  ![module settings](/pics/modules-scala.png "Scala Project Dependencies")
 
   If you create any additional modules not using Scala (like Java only ones), but wish to use code you wrote from a module with a Scala facet, you just have to add that Scala module as a dependency to the Java only module as you would normally in Intellij.
 
