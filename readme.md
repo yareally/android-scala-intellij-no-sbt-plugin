@@ -1,4 +1,4 @@
-# Using Scala on Android without SBT
+# Scala on Android without SBT
 
 
 Want to use Scala on Android with Intellij without having to bring the entire sbt build system into your life and the pros/cons it provides?
