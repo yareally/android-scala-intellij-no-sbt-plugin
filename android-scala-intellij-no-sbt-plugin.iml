@@ -19,7 +19,7 @@
         <option name="explainTypeErrors" value="true" />
         <option name="pluginPaths">
           <array>
-            <option value="D:\Program Files (x86)\scala\misc\scala-devel\plugins\continuations.jar" />
+            <option value="libs/scala-plugins/continuations.jar" />
           </array>
         </option>
         <option name="uncheckedWarnings" value="true" />
