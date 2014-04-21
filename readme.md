@@ -47,7 +47,7 @@ Nothing as far as I know so far.
 
 2.10.3, the latest stable as of 2013-11-27
 
-2.11.0 RC4 also works as of 2014-04-20. In 2.11.0, Scala's XML library, parser/combinators library, and continuations library have been decoupled from scala-library.jar and require being added in addition to scala-library.jar if needed. Those libraries can be found under the same directory as scala-library (/lib/ under your scala install directory). Proguard is also optional (but recommended to reduce size for market apps) for Scala 2.11.0 due to the reduced size of scala-library.jar
+2.11.0 RC4 also works as of 2014-04-20. In 2.11.0, Scala's XML library, parser/combinators library, and continuations library have been decoupled from scala-library.jar and require being added in addition to scala-library.jar if needed. Those libraries can be found under the same directory as scala-library (/lib/ under your scala install directory). Proguard may also optional if you do not require the full library (but recommended to reduce size for market apps) for Scala 2.11.0 due to the reduced size of scala-library.jar
 
 ### How is debugging possible?
 
@@ -57,7 +57,7 @@ Proguard is set not to obfuscate so it doesn't remove the debugging symbols. Tha
 
 In Scala 2.10.0, there are way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess (otherwise, you'll get errors like Android Dex: [android-scala] trouble writing output: Too many methods: 66095; max is 65536.).
 
-In Scala 2.11.0, the jar size for scala-library has been reduced considerably by decoupling the XML, parser and continuation libraries and no longer requires Proguard (though it's recommended if you want to reduce the size of the apk for market apps). 
+In Scala 2.11.0, the jar size for scala-library has been reduced considerably by decoupling the XML, parser and continuation libraries and may not require Proguard (though it's recommended if you want to reduce the size of the apk for market apps). 
 
 ### Does Google's Android Studio work, since it's based on Intellij?
 
