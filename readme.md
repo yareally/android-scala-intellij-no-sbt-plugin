@@ -61,7 +61,7 @@ In Scala 2.11.0, the jar size for scala-library has been reduced considerably by
 
 ### Does Google's Android Studio work, since it's based on Intellij?
 
-It should fine without Gradle. If wishing to use Gradle, it would require more work. I have not tested a Gradle based project with Intellij IDEA 13 or Android Studio yet.
+It should work fine without Gradle. If wishing to use Gradle, it would require more work. I have not tested a Scala Gradle based project with Intellij IDEA 13 or Android Studio yet.
 
 ### I have questions or want to add examples or documentation to this guide
 
