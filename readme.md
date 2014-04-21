@@ -55,7 +55,9 @@ Proguard is set not to obfuscate so it doesn't remove the debugging symbols. Tha
 
 ### Why does Proguard work?
 
-There's way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess (otherwise, you'll get errors like Android Dex: [android-scala] trouble writing output: Too many methods: 66095; max is 65536.).
+In Scala 2.10.0, there are way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess (otherwise, you'll get errors like Android Dex: [android-scala] trouble writing output: Too many methods: 66095; max is 65536.).
+
+In Scala 2.11.0, the jar size for scala-library has been reduced considerably by decoupling the XML, parser and continuation libraries and no longer requires Proguard (though it's recommended if you want to reduce the size of the apk for market apps). 
 
 ### Does Google's Android Studio work, since it's based on Intellij?
 
