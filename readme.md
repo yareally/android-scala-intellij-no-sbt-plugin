@@ -47,7 +47,7 @@ Nothing as far as I know so far.
 
 2.10.3, the latest stable as of 2013-11-27
 
-2.11.0 RC4 also works as of 2014-04-20. As of 2.11.0, Scala's XML library, parser/cominbators library, and continuations library have been decoupled from scala-library.jar and require being added in addition to scala-library.jar if needed. Those libraries can be found under the same directory as scala-library (/lib/ under your scala install directory). Proguard is also optional (but reccomended to reduce size for market apps) for Scala 2.11.0 due to the reduced size of scala-library.jar
+2.11.0 RC4 also works as of 2014-04-20. As of 2.11.0, Scala's XML library, parser/cominbators library, and continuations library have been decoupled from scala-library.jar and require being added in addition to scala-library.jar if needed. Those libraries can be found under the same directory as scala-library (/lib/ under your scala install directory). Proguard is also optional (but recommended to reduce size for market apps) for Scala 2.11.0 due to the reduced size of scala-library.jar
 
 ### How is debugging possible?
 
