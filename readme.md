@@ -47,6 +47,8 @@ Nothing as far as I know so far.
 
 2.10.3, the latest stable as of 2013-11-27
 
+2.11.0 RC4 also works as of 2014-04-20. As of 2.11.0, Scala's XML library, parser/cominbators library, and continuations library have been decoupled from scala-library.jar and require being added in addition to scala-library.jar if needed. Those libraries can be found under the same directory as scala-library (/lib/ under your scala install directory).
+
 ### How is debugging possible?
 
 Proguard is set not to obfuscate so it doesn't remove the debugging symbols. That's really the key to my guide. Proguard can be tricky, but I've taken care of most of the common edge cases you might encounter with the included proguard file in this repository. If you encounter any I missed, just let me know. Things like actionbar sherlock and other libraries should work fine though.
