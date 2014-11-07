@@ -75,7 +75,7 @@ If you're coming from a project on Intellij IDEA 13, Intellij IDEA 14 will autom
 
 I recently tested (2014-11-07) Intellij IDEA 14 with my guide and it works fine. However some of the locations for configuration changes have moved since version 13. Scala specific settings are now located under File → Settings → Build, Execution, Deployment → Compiler → Scala Compiler (new location for enabling/adding the continuations library) while others remain under "Project Structure." 
 
-Certain steps, like adding a Scala facet are no longer needed (thanks JetBrains!) and you can add Scala directly into an existing Android project under Project Settings → Modules → Add (the + icon) → New Module. This will also setup/download Scala for you if you do not already have it. Proguard settings are under Facets → Android → Proguard Tab and still need to be configured as usual.
+Certain steps, like adding a Scala facet are no longer needed (thanks JetBrains!) and you can add Scala directly into an existing Android project under Project Settings → Modules → Add (the + icon) → New Module. This will also guide you through setting up the Scala Compiler and libraries if you do not already done so. Proguard settings are under Facets → Android → Proguard Tab and still need to be configured as usual.
 
 Scala Android projects also compile a bit faster with IDEA 14 (about 5-10% depending on the project size and libraries). Scala performance in the editor is also much improved. 
 
