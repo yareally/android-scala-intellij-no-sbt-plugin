@@ -45,9 +45,9 @@ Nothing as far as I know so far.
 
 ### What version of Scala did you test with?
 
-2.10.3, the latest stable as of 2013-11-27
+2.11.2, the latest stable as of 2014-11-07
 
-2.11.0 RC4 also works as of 2014-04-20. In 2.11.0, Scala's XML library, parser/combinators library, and continuations library have been decoupled from scala-library.jar and require being added in addition to scala-library.jar if needed. Those libraries can be found under the same directory as scala-library (/lib/ under your scala install directory). Proguard may also optional if you do not require the full library (but recommended to reduce size for market apps) for Scala 2.11.0 due to the reduced size of scala-library.jar
+In 2.11.x, Scala's XML library, parser/combinators library, and continuations library have been decoupled from scala-library.jar and require being added in addition to scala-library.jar if needed. Those libraries can be found under the same directory as scala-library (/lib/ under your scala install directory). Proguard may also optional if you do not require the full library (but recommended to reduce size for market apps) for Scala 2.11.x due to the reduced size of scala-library.jar
 
 ### How is debugging possible?
 
@@ -57,18 +57,27 @@ Proguard is set not to obfuscate so it doesn't remove the debugging symbols. Tha
 
 In Scala 2.10.0, there are way too many methods in Scala for the dalvik compiler (dx) to handle if you simply add all the jars to the class path and compile. Proguard will strip out all the excess (otherwise, you'll get errors like Android Dex: [android-scala] trouble writing output: Too many methods: 66095; max is 65536.).
 
-In Scala 2.11.0, the jar size for scala-library has been reduced considerably by decoupling the XML, parser and continuation libraries and may not require Proguard (though it's recommended if you want to reduce the size of the apk for market apps). 
+In Scala 2.11.x, the jar size for scala-library has been reduced considerably by decoupling the XML, parser and continuation libraries and may not require Proguard (though it's recommended if you want to reduce the size of the apk for market apps). 
 
 ### Does Google's Android Studio work, since it's based on Intellij?
 
-It should work fine without Gradle. If wishing to use Gradle, it would require more work. I have not tested a Scala Gradle based project with Intellij IDEA 13 or Android Studio yet.
+Last I checked, I did not see a way to compile an Android app in Android Studio without Gradle, so my guide will not work. There exists a [Android + Scala + Gradle plugin](https://github.com/saturday06/gradle-android-scala-plugin) that would work for Android Studio, but I have never used it. You're probably better off using SBT though, if you want a build system for Scala on Android.
 
 ### I have questions or want to add examples or documentation to this guide
 
 Feel free to create an issue and/or send a pull request.
 
-
 ## Building with Intellij IDEA 12+ or Android Studio
+
+### Intellij IDEA 14 Update
+
+If you're coming from a project on Intellij IDEA 13, Intellij IDEA 14 will automatically update it for you and work without an issue (unless you were using continuations, you may have to re-add the library). If you're starting out with IDEA 14, there have been some changes (mentioned below). I will update the images in my guide to reflect that soon, but do not have time until later in November.
+
+I recently tested (2014-11-07) Intellij IDEA 14 with my guide and it works fine. However some of the locations for configuration changes have moved since version 13. Scala specific settings are now located under File → Settings → Build, Execution, Deployment → Compiler → Scala Compiler (new location for enabling/adding the continuations library) while others remain under "Project Structure." 
+
+Certain steps, like adding a Scala facet are no longer needed (thanks JetBrains!) and you can add Scala directly into an existing Android project under Project Settings → Modules → Add (the + icon) → New Module. This will also setup/download Scala for you if you do not already have it. Proguard settings are under Facets → Android → Proguard Tab and still need to be configured as usual.
+
+Scala Android projects also compile a bit faster with IDEA 14 (about 5-10% depending on the project size and libraries). Scala performance in the editor is also much improved. 
 
 ### Prerequisites
 
