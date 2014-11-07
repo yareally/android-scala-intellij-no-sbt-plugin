@@ -19,6 +19,8 @@ Any Android library that requires custom annotation processing may not work [suc
 
 Aside from the minimal code showing that Scala works on Android, here's some more elaborate [source code](https://github.com/yareally/SignalInfo/tree/scala) to a Scala Android app I built using a few popular libraries [ActionBarSherlock](http://actionbarsherlock.com), [support.GridLayout](http://developer.android.com/tools/support-library/features.html#v7-appcompat) and [loaderex](https://github.com/commonsguy/cwac-loaderex)).
 
+An [example](https://gist.github.com/yareally/589855a3c5e4d73410b1) using Scala's [Pimp my Library](http://alvinalexander.com/scala/scala-2.10-implicit-class-example) pattern to get rid of some of the verbosity of Java Android for setting View.onClick listeners and getting view types from a resource ID.
+
 A [small example](https://gist.github.com/yareally/5941536) using Typesafe's [Async/Await library](http://docs.scala-lang.org/sips/pending/async.html) and an example of how to convert a Java Anonymous function to a Scala lambda. Also requires [adding the continuations library](https://github.com/yareally/android-scala-intellij-no-sbt-plugin#prerequisites).
 
 ## FAQ
