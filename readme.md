@@ -49,7 +49,7 @@ Nothing as far as I know so far.
 
 ### What version of Scala did you test with?
 
-2.11.2, the latest stable as of 2014-11-07
+2.11.6, the latest stable as of 2015-05-06
 
 In 2.11.x, Scala's XML library, parser/combinators library, and continuations library have been decoupled from scala-library.jar and require being added in addition to scala-library.jar if needed. Those libraries can be found under the same directory as scala-library (/lib/ under your scala install directory). Proguard may also optional if you do not require the full library (but recommended to reduce size for market apps) for Scala 2.11.x due to the reduced size of scala-library.jar
 
@@ -95,11 +95,11 @@ Scala Android projects also compile a bit faster with IDEA 14 (about 5-10% depen
 
 4. Add the following jars as libraries to your project via *File → Project Structure → Libraries*:
 
-  **scala-actors.jar** under */path-to-scala-install-dir/libs/*
+  **scala-actors.jar** under */path-to-scala-install-dir/libs/* (use the [Akka](http://akka.io/) framework jars included in Scala instead on 2.11 since the Scala actor framework was depreciated)
 
   **scala-library.jar** under */path-to-scala-install-dir/libs/*
 
-  **continuations.jar** (optional, though it's required for actors, futures, promises, async/await, etc). The jar is in your scala install directory under */path-to-scala-install-dir/misc/scala-devel/plugins*.
+  **continuations.jar** (no longer needed on Scala 2.11, but was required for concurrency code on 2.10). The jar is in your scala install directory under */path-to-scala-install-dir/misc/scala-devel/plugins*.
 
 5. Make sure the libraries created above are set as a dependency for all modules you add a Scala facet from step 2. Module dependencies are set via *File → Project Structure → Modules → Dependencies Tab*.
 
